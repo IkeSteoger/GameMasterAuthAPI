@@ -9,6 +9,7 @@ const cors = require('cors');
 const notFoundHandler = require('./error-handlers/404.js');
 const errorHandler = require('./error-handlers/500.js');
 const authRoutes = require('./auth/routes.js');
+const videoGameRoutes = require('./routes/video-games.js');
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(authRoutes);
+app.use(videoGameRoutes);
 
 app.get('/', (req, res, next) => {
   res.status(200).send('Server is alive!!!');
