@@ -21,11 +21,11 @@ Ike Steoger
 
 ### Setup
 
-#### `.env` requirements (where applicable)
+#### `.env` requirements
 
 See the `.env.sample`
 
-#### How to initialize/run your application (where applicable)
+#### How to initialize/run your application
 
 Clone repo, `npm i`, set up DB with `npm run db:config` & then `npm run db:create` then run `nodemon` in the terminal
 
