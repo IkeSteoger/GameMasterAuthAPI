@@ -2,7 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
-const { videoGamesModel, tabletopGamesModel } = require('../models/index');
+const { videoGamesModel } = require('../models/index');
 
 router.post('/videoGames', async (request, response, next) => {
   let videoGames = await videoGamesModel.create(request.body);
@@ -13,14 +13,6 @@ router.post('/videoGames', async (request, response, next) => {
 router.get('/videoGames', async (request, response, next) => {
   let videoGames = await videoGamesModel.read();
 
-  response.status(200).send(videoGames);
-});
-
-router.get('/videoGamesAndTabletop', async (request, response, next) => {
-  let videoGames = await videoGamesModel.read(null, {
-    include: {model: tabletopGamesModel},
-    where: {released: request.query.released},
-  });
   response.status(200).send(videoGames);
 });
 

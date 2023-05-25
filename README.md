@@ -2,7 +2,7 @@
 
 ## Project: Game Master Auth API
 
-### Author: Tim Maupin & Ike Steoger
+### Authors: Tim Maupin & Ike Steoger
 
 ### Problem Domain
 
@@ -12,12 +12,12 @@ This is a basic server with basic authentication, both `basicAuth` and `bearerAu
 
 - [GitHub Actions ci/cd](https://github.com/IkeSteoger/gameMasterAuthAPI/actions)
 <!-- - [back-end dev server url]() -->
-- [back-end prod server url]()
+- [back-end prod server url](https://gamemasterauthapi.onrender.com)
 
 ### Collaborators
 
-Started with CodeFellows starter code!  
-Reece Renninger
+Tim Maupin  
+Ike Steoger
 
 ### Setup
 
@@ -33,17 +33,18 @@ Clone repo, `npm i`, set up DB with `npm run db:config` & then `npm run db:creat
 
 - GET : `/` - server is live route
 - POST: `/signup` - sign up with username & password
-- POST: `signin` - sign in with username & password
-- GET : `/api/v1/model` - get all model in DB
-- GET : `/api/v1/model/:id` - get specific model item by ID in DB
-- POST : `/api/v1/model` - add new model item to DB
-- PUT : `/api/v1/model/:id` - update model item by ID in DB
-- DELETE : `/api/v1/model/:id` - delete model item by ID in DB
-- GET : `/api/v2/model` - get all model in DB but requires `BasicAuth`
-- GET : `/api/v2/model/:id` - get specific model item by ID in DB but requires `BasicAuth`
-- POST : `/api/v2/model` - add new model item to DB but requires `BearerAuth` and proper `ACL` role
-- PUT : `/api/v2/model/:id` - update model item by ID in DB but requires `BearerAuth` and proper `ACL` role
-- DELETE : `/api/v2/model/:id` - delete model item by ID in DB but requires `BearerAuth` and proper `ACL` role
+- POST: `/signin` - sign in with username & password
+- GET : `/users` - with admin priviledges you can see all registered Users
+- GET : `/videoGames` - see all video games in DB, must have read access
+- GET : `/videoGames/:id` - see a video game by ID in DB, must have read access
+- POST : `/videoGames` - add to video games in DB, must have writer access
+- PUT : `/videoGames/:id` - update a video game by ID, must have editor access
+- DELETE : `/videoGames/:id` - delete a video game by ID, must have admin access
+- GET : `/tabletopGames` - see all video games in DB, must have read access
+- GET : `/tabletopGames/:id` - see a video game by ID in DB, must have read access
+- POST : `/tabletopGames` - add to video games in DB, must have writer access
+- PUT : `/tabletopGames/:id` - update a video game by ID, must have editor access
+- DELETE : `/tabletopGames/:id` - delete a video game by ID, must have admin access
 
 #### Tests
 
