@@ -20,7 +20,7 @@ router.post('/tabletopGames', bearerAuth, acl('create'), async (request, respons
 router.get('/tabletopGames', basicAuth, async (request, response, next) => {
   try {
     let tabletopGames = await tabletopGamesModel.read();
-  
+    
     response.status(200).send(tabletopGames);
   } catch(err) {
     next(err);
