@@ -6,7 +6,7 @@
 
 ### Problem Domain
 
-This is a basic server with basic authentication, both `basicAuth` and `bearerAuth`.
+This is a server and database with basic, bearer, and ACL authorizations via `/signup` and `/signin`. It uses full CRUD with both `/videogames` & `/boardgames`.
 
 ### Links and Resources
 
